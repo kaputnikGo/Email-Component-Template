@@ -1,15 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-    rev2.4 - Email Component Template 2015 - responsive test
+    rev2.15 - Email Component Template 2015 - responsive test
 	</title>  
-	<meta name="keywords" content="">
-	<meta name="description" content="">  
-<!-- limited header styles component - version 2.5 -->	
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />  
+<!-- limited header styles component - version 2.15 -->
+<!-- NOTES:
+1.  images need to be sized to 1:1 scale, declare style max-width
+    as some clients will only display images at this scale
+2.  <td> elements MUST have width assigned
+3.  align=center does not necessarily cascade 
+4.  inaccuracies are derived from nesting
+5.  &nbsp; indicates null element - not necessarily respected
+6.  assume IRIS wil linline the <style>
+7.  validator.w3.org == errors in facebook url only (&, = )
+
+a. make percentage a tenth of pixel number (10% == 100px)
+
+-->	
   <style type="text/css">
     body {
       color:#252525;
@@ -27,7 +42,23 @@
     }
     a:hover {
       color: #000000;
-    }   
+    }
+    a img {
+      outline : none;
+    }
+    img {
+      border : 0;
+      /* global max-width for any and all images that don't delare */
+      max-width: 600px;
+    }
+    hr { 
+      display: block; 
+      height: 1px;
+      border: 0; 
+      border-top: 2px solid #999999;
+      margin: 1em 0; 
+      padding: 0; 
+    }    
     table, th, td {
       border: 1px solid #99CCFF;
     }
@@ -41,7 +72,13 @@
   <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#012331">
     <tr>
       <td align="center">
-        <img style="min-width:320px;max-width:415px;" align="center" width="30%" src="http://www.moneymorning.com.au/wp-content/uploads/2015/04/MMP_email_banner-rev.png" alt="Money Morning">
+        <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#012331">
+          <tr>
+            <td align="center">
+              <img style="width:auto;max-width:80%" align="middle" src="http://www.moneymorning.com.au/wp-content/uploads/2015/04/MMP_email_banner-rev.png" alt="Money Morning" />
+            </td>
+          </tr>
+        </table>  
       </td>
     </tr>
   </table>
@@ -64,17 +101,17 @@
                 <br /><br />
                 I’m worried for you.
                 <br /><br />
-                Locavore four dollar toast retro fingerstache hoodie, bespoke trust fund Williamsburg. You probably haven't heard of them small batch fanny pack art party cold-pressed biodiesel, American Apparel Williamsburg tousled cronut PBR&B. Roof party sustainable taxidermy, tousled Thundercats drinking vinegar post-ironic typewriter heirloom swag master cleanse Banksy. Listicle kitsch cold-pressed, hashtag skateboard Truffaut occupy chillwave artisan iPhone meditation Schlitz direct trade. High Life sustainable artisan, pop-up next level cronut DIY direct trade Odd Future. Mixtape PBR&B chambray, banh mi viral forage jean shorts bicycle rights you probably haven't heard of them Echo Park put a bird on it. Pour-over cronut occupy banjo ennui Vice, meh stumptown bicycle rights quinoa shabby chic lumbersexual butcher.
+                Locavore four dollar toast retro fingerstache hoodie, bespoke trust fund Williamsburg. You probably haven't heard of them small batch fanny pack art party cold-pressed biodiesel, American Apparel Williamsburg tousled cronut PBR&amp;B. Roof party sustainable taxidermy, tousled Thundercats drinking vinegar post-ironic typewriter heirloom swag master cleanse Banksy. Listicle kitsch cold-pressed, hashtag skateboard Truffaut occupy chillwave artisan iPhone meditation Schlitz direct trade. High Life sustainable artisan, pop-up next level cronut DIY direct trade Odd Future. Mixtape PBR&amp;B chambray, banh mi viral forage jean shorts bicycle rights you probably haven't heard of them Echo Park put a bird on it. Pour-over cronut occupy banjo ennui Vice, meh stumptown bicycle rights quinoa shabby chic lumbersexual butcher.
                 <br /><br />
-                Farm-to-table cardigan squid cornhole seitan sartorial, actually lo-fi 90's cliche food truck narwhal synth. Mustache Thundercats Wes Anderson deep v pop-up, kitsch Odd Future hoodie lomo artisan mlkshk four dollar toast. Lumbersexual pork belly lo-fi Schlitz retro flexitarian. Ennui yr Thundercats before they sold out. Meggings kitsch 90's, lomo organic disrupt yr. Tattooed locavore occupy, heirloom wayfarers bespoke cronut meggings jean shorts mumblecore. Keytar banjo hashtag, 8-bit church-key fingerstache Shoreditch drinking vinegar Vice PBR&B heirloom trust fund put a bird on it gentrify.
+                Farm-to-table cardigan squid cornhole seitan sartorial, actually lo-fi 90's cliche food truck narwhal synth. Mustache Thundercats Wes Anderson deep v pop-up, kitsch Odd Future hoodie lomo artisan mlkshk four dollar toast. Lumbersexual pork belly lo-fi Schlitz retro flexitarian. Ennui yr Thundercats before they sold out. Meggings kitsch 90's, lomo organic disrupt yr. Tattooed locavore occupy, heirloom wayfarers bespoke cronut meggings jean shorts mumblecore. Keytar banjo hashtag, 8-bit church-key fingerstache Shoreditch drinking vinegar Vice PBR&amp;B heirloom trust fund put a bird on it gentrify.
                 <br /><br />
                 Many thanks,
 <!-- end of user content above this line -->
 <!-- author sign off component -->
                 <br /><br />
-                <img src="http://www.portphillippublishing.com.au/images/Bensig.png" width="200" alt="Ben Otomo signature">
-                <br>Ben Otomo
-                <br>
+                <img style="width:auto;max-width:200px" src="http://portphillippublishing.com.au/wp-content/uploads/Bensig.jpg" width="200" alt="Ben Otomo signature" />
+                <br />Ben Otomo
+                <br />
                 Associate Publisher, <em>Money Morning</em>  
               </font></p>
             </td>
@@ -95,11 +132,11 @@
       <td align="center">
         <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
           <tr align="center">
-            <td width="33%"><hr color="#999999"></td>
+            <td width="33%"><hr /></td>
             <td width="33%">
               <p style="font-family: Georgia, serif; font-size: 12px; color:#999999;"><font face="Georgia, serif">Advertisment</font></p>
             </td>
-            <td width="33%"><hr color="#999999"></td>
+            <td width="33%"><hr /></td>
           </tr>
         </table>
       </td>
@@ -147,6 +184,11 @@
           </tr>
           <tr>
             <td width="10%">&nbsp;</td>
+            <td width="80%" bgcolor="#fae9d6" align="center">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+          </tr>          
+          <tr>
+            <td width="10%">&nbsp;</td>
             <td width="80%">&nbsp;</td>
             <td width="10%">&nbsp;</td>
           </tr>
@@ -170,11 +212,11 @@
 					<tr>
 						<td width="10%">&nbsp;</td>
 						<td width="30%" align="center">
-							<a href="#"><img src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-bg.png" alt="Bullying Guide" border="0"></a>
+							<a href="#"><img style="width:auto;max-width:80%" src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-bg.png" alt="Bullying Guide" border="0" /></a>
 						</td>
 						<td width="20%">&nbsp;</td>
 						<td width="30%" align="center">
-							<a href="#"><img src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-sop.png" alt="How to Develop a Safe Operating Procedure" border="0"></a>
+							<a href="#"><img style="width:auto;max-width:80%" src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-sop.png" alt="How to Develop a Safe Operating Procedure" border="0" /></a>
 						</td>
             <td width="10%">&nbsp;</td>
 					</tr>							
@@ -223,7 +265,7 @@
 						<td width="20%">&nbsp;</td>
 						<td width="60%" align="center">
 							<a href="#">
-                <img src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-smtl.png" alt="Social Media & The Law" border="0">
+                <img style="width:auto;max-width:80%" src="http://www.portnerpress.com.au/wp-content/uploads/2015/06/prod-order-smtl.png" alt="Social Media &amp; The Law" border="0" />
 							</a>
 						</td>
 						<td width="20%">&nbsp;</td>
@@ -232,7 +274,7 @@
 						<td width="20%"></td>
 						<td width="60%" align="center">
 							<p style="font-family: Calibri, sans-serif; font-size: 15px;"><font face="Calibri, sans-serif">
-                <strong>Social Media & The Law</strong>
+                <strong>Social Media &amp; The Law</strong>
                 <br />
                 Price: <span style="text-decoration: line-through;">$49</span> <strong><span style="color: #e60002;">$41.00</span></strong>
               </font></p>
@@ -274,23 +316,23 @@
       <td align="center">
         <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">							
           <tr> 
-            <td width="10%">&nbsp;</td>
-            <td width="80%">&nbsp;</td>
-            <td width="10%">&nbsp;</td>            
+            <td width="20%">&nbsp;</td>
+            <td width="60%">&nbsp;</td>
+            <td width="20%">&nbsp;</td>            
           </tr>
           <tr>
-            <td width="10%">&nbsp;</td>
-						<td width="80%" align="center">
+            <td width="20%">&nbsp;</td>
+						<td width="60%" align="center">
 							<a style="height:100%;color:#0255bb;" href="https://orders.portnerpress.com.au/pdtrialOHsingle/E921Q8A2/index.htm?pageNumber=2">
-                <img style="max-width:600px;" width="100%" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-trial_banner.jpg" alt="HS Bulletin trial banner" />
+                <img style="width:80%;" align="middle" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-trial_banner.jpg" alt="HS Bulletin trial banner" />
 							</a>
 						</td>
-            <td width="10%">&nbsp;</td>            
+            <td width="20%">&nbsp;</td>            
 					</tr>
           <tr> 
-            <td width="10%">&nbsp;</td>
-            <td width="80%">&nbsp;</td>
-            <td width="10%">&nbsp;</td>            
+            <td width="20%">&nbsp;</td>
+            <td width="60%">&nbsp;</td>
+            <td width="20%">&nbsp;</td>            
           </tr>          
 				</table>
       </td>
@@ -419,7 +461,7 @@
                   <td width="5%" align="center">
                     <p style="font-family: Calibri, sans-serif; font-size: 15px; mso-line-height-rule: exactly; line-height: 100%;"><font face="Calibri, sans-serif">
                       &ndash;
-                    </font><p>
+                    </font></p>
                   </td>
                   <td width="80%">                      
                     <p style="font-family: Calibri, sans-serif; font-size: 15px; mso-line-height-rule: exactly; line-height: 100%;"><font face="Calibri, sans-serif">
@@ -581,13 +623,13 @@
             <td width="10%">&nbsp;</td>
             <td width="30%" align="center">
               <a href="http://www.employmentlawhandbook.com.au/free-workplace-bulletin-newsletter/">
-                <img src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/WKP-bulletin-roundel.png" alt="Workplace Bulletin icon" border="0">
+                <img style="width:auto;max-width:80%" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/WKP-bulletin-roundel.png" alt="Workplace Bulletin icon" border="0" />
               </a>
             </td>
             <td width="20%">&nbsp;</td>
             <td width="30%" align="center">
               <a href="http://www.coradviser.com.au/">
-                <img src="http://www.employmentlawhandbook.com.au/wp-content/uploads/2015/04/COR-bulletin-roundel.png" alt="CoR Adviser Bulletin icon" border="0">
+                <img style="width:auto;max-width:80%" src="http://www.employmentlawhandbook.com.au/wp-content/uploads/2015/04/COR-bulletin-roundel.png" alt="CoR Adviser Bulletin icon" border="0" />
               </a>
             </td>
             <td width="10%">&nbsp;</td>
@@ -618,13 +660,13 @@
             <td width="10%">&nbsp;</td>
             <td width="30%" align="center">
               <a href="http://www.employmentlawhandbook.com.au/free-workplace-bulletin-newsletter/" target="_blank">
-                <img src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-signup-blue.png" alt="Workplace Bulletin Signup button" border="0">
+                <img style="width:auto;max-width:80%" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-signup-blue.png" alt="Workplace Bulletin Signup button" border="0" />
               </a>
             </td>
             <td width="20%">&nbsp;</td>
             <td width="30%" align="center">
               <a href="http://www.coradviser.com.au/" target="_blank">
-                <img src="http://www.employmentlawhandbook.com.au/wp-content/uploads/2015/04/COR_Bulletin-signupButton.png" alt="COR Adviser Bulletin Sign Up" border="0">
+                <img style="width:auto;max-width:80%" src="http://www.employmentlawhandbook.com.au/wp-content/uploads/2015/04/COR_Bulletin-signupButton.png" alt="COR Adviser Bulletin Sign Up" border="0" />
               </a>
             </td>
             <td width="10%">&nbsp;</td>
@@ -645,7 +687,7 @@
   <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f2f2f2">
     <tr>
       <td align="center">
-        <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#00aeff">          
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#00aeff">          
           <tr align="center" valign="top"> 
             <td width="30%">&nbsp;</td>            
             <td width="40%" align="center">
@@ -656,7 +698,7 @@
             <td width="30%">&nbsp;</td>            
           </tr>         
         </table>
-        <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">  
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">  
           <tr align="center" bgcolor="#404041" style="color:#FFFFFF">
             <td width="40%">
               <strong>Stock</strong>
@@ -798,7 +840,7 @@
             </td>
           </tr>              
         </table>
-        <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">          
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">          
           <tr align="center" valign="top"> 
             <td width="30%">&nbsp;</td>            
             <td width="40%">&nbsp;</td>
@@ -812,7 +854,7 @@
 <!-- paged footer component -->
   <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f2f2f2">
     <tr>
-      <td>
+      <td align="center">
         <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
           <tr align="center">
             <td width="10%">&nbsp;</td>
@@ -853,7 +895,7 @@
             </td>
             <td width="10%">&nbsp;</td>         
           </tr>
-          </tr>
+          <tr>
             <td width="10%">&nbsp;</td>
             <td width="80%">&nbsp;</td>
             <td width="10%">&nbsp;</td>
@@ -866,30 +908,28 @@
 <!-- full footer component -->
   <table align="center" width="100%" style="background-color: #353535;" cellspacing="0" cellpadding="0" border="0">
     <tr>
-      <td width="100%" style="width: 100%; background-image:url('http://fitzroypress.com.au/wp-content/uploads/2015/05/footer-repeat.gif'); background-repeat:repeat-x;" background="http://fitzroypress.com.au/wp-content/uploads/2015/05/footer-repeat.gif" valign="top">&nbsp;</td>
+      <td width="100%" style="width: 100%; background-image:url('http://fitzroypress.com.au/wp-content/uploads/2015/05/footer-repeat.gif'); background-repeat:repeat-x;" valign="top">&nbsp;</td>
     </tr>
     <tr>
-      <td>
+      <td width="80%" align="center">
         <table width="80%" style="text-align: center;" cellspacing="0" cellpadding="0" border="0">	            
           <tr>
-            <td width="40%"></td>
-            <td width="20%"></td>
-            <td width="40%"></td>            
+            <td width="10%">&nbsp;</td>
+            <td width="50%">&nbsp;</td>
+            <td width="30%">&nbsp;</td> 
+            <td width="10%">&nbsp;</td>            
           </tr>
           <tr>
-            <td width="40%">
-                    <img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-email-footer-logo.jpg" width="227" height="65" alt="ILA Postcards logo">
-                  </td>
-                  <td width="20%">&nbsp;</td>
-                  <td width="40%">
-                    <img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-share.png" width="41" height="19" alt="ILA share">
-                    <a href="https://twitter.com/inlivingau">
-                      <img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-twitter.png" width="20" height="19" alt="ILA twitter">
-                    </a>
-                    <a href="https://business.facebook.com/pages/International-Living-Australia/853125994741375?business_id=860368987350409&ref=bookmarks">
-                      <img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-facebook.png" width="20" height="19" alt="ILA facebook">
-                    </a>
-                  </td>
+            <td width="10%">&nbsp;</td>
+            <td width="50%" align="left">
+              <img style="width:auto;max-width:80%" src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-email-footer-logo.jpg" width="227" height="65" alt="ILA Postcards logo" />
+            </td>
+            <td width="30%" align="right">
+              <img style="width:auto;max-width:80%" src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-share.png" width="41" height="19" alt="ILA share" />
+              <a href="https://twitter.com/inlivingau"><img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-twitter.png" width="20" height="19" alt="ILA twitter" /></a>
+              <a href="https://business.facebook.com/pages/International-Living-Australia/853125994741375?business_id=860368987350409&ref=bookmarks"><img src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-facebook.png" width="20" height="19" alt="ILA facebook" /></a>
+            </td>
+            <td width="10%">&nbsp;</td>            
           </tr>        
         </table>
       </td>
@@ -936,6 +976,7 @@
             </td>
             <td width="10%">&nbsp;</td>         
           </tr>
+          <tr>
             <td width="10%">&nbsp;</td>
             <td width="80%">&nbsp;</td>
             <td width="10%">&nbsp;</td>
