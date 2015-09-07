@@ -7,12 +7,15 @@
   <meta name="viewport" content="initial-scale=1.0" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-    rev2.18 - Email Component Template 2015 - responsive test
+    rev2.21 - Email Component Template 2015 - responsive test
 	</title>  
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />  
-<!-- limited header styles component - version 2.18 -->
+<!-- limited header styles component - version 2.21 -->
 <!-- NOTES:
+This version attempts to minimise sender code to stay out of the way of 
+the inevitable (unique) client-side code that will draw the email.
+
 1.  images need to be sized to 1:1 scale, declare style max-width
     as some clients will only display images at this scale
 2.  <td> elements MUST have width assigned
@@ -23,9 +26,12 @@
 7.  validator.w3.org == errors in facebook url only (&, = )
 8.  added white page/red footer/white links, that gets spam positive 
       due white on white links :solution add black backer
+9.  yahoo ios7.1 safari translate y stops at -2547px
+10. yahoo webmail setting : uncheck settings/viewing/enable conversations
+      this stops yahoo reducing an email to a snippet.
+11. yahoo webmail mobile site firefox borks on render as html (other browsers auto render as html)
 
-a. make percentage a tenth of pixel number (10% == 100px)
-b. email should be targetting 320px width first
+z. make percentage a tenth of pixel number (10% == 100px)
 
 -->	
   <style type="text/css">
@@ -65,11 +71,24 @@ b. email should be targetting 320px width first
     table, th, td {
       border: 1px solid #99CCFF;
     }
+    .preheader { 
+      display:none !important; 
+      visibility: hidden; 
+      opacity: 0; 
+      color: transparent; 
+      height: 0; 
+      width: 0;
+    } 
 	</style>
 <!-- end header styles component -->
 </head>
 <body>
 <!-- end universal html header component -->
+<!-- PRE-HEADER TEXT -->
+<span class="preheader" style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
+  This pre-header text should show up in GMail, iOS, Mail.app, &amp; more: 75 char limit.
+</span>
+
 <!-- start of paged template -->
 <!-- full width banner component -->
   <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#012331">
@@ -77,9 +96,13 @@ b. email should be targetting 320px width first
       <td width="100%" align="center">
         <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#012331">
           <tr>
-            <td align="center">
-              <img style="width:100%;max-width:367px;" align="middle" src="http://www.moneymorning.com.au/wp-content/uploads/2015/04/MMP_email_banner-rev.png" alt="Money Morning" />
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td width="60%" align="center">
+              <img width="" style="width:100%;max-width:367px;" align="middle" src="http://www.moneymorning.com.au/wp-content/uploads/2015/04/MMP_email_banner-rev.png" alt="Money Morning" />
             </td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
           </tr>
         </table>  
       </td>
@@ -319,23 +342,29 @@ b. email should be targetting 320px width first
       <td align="center">
         <table width="80%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">							
           <tr> 
-            <td width="20%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
             <td width="60%">&nbsp;</td>
-            <td width="20%">&nbsp;</td>            
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>            
           </tr>
           <tr>
-            <td width="20%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
 						<td width="60%" align="center">
 							<a style="height:100%;color:#0255bb;" href="https://orders.portnerpress.com.au/pdtrialOHsingle/E921Q8A2/index.htm?pageNumber=2">
-                <img width="300" style="width:80%;min-width:320px;" align="middle" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-trial_banner.jpg" alt="HS Bulletin trial banner" />
+                <img width="" style="width:100%;max-width:600px;" align="middle" src="http://www.healthandsafetyhandbook.com.au/wp-content/uploads/2015/04/HS_Bulletin-trial_banner.jpg" alt="HS Bulletin trial banner" />
 							</a>
 						</td>
-            <td width="20%">&nbsp;</td>            
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>            
 					</tr>
           <tr> 
-            <td width="20%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
             <td width="60%">&nbsp;</td>
-            <td width="20%">&nbsp;</td>            
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
           </tr>          
 				</table>
       </td>
@@ -925,7 +954,7 @@ b. email should be targetting 320px width first
           <tr>
             <td width="10%">&nbsp;</td>
             <td width="50%" align="left">
-              <img style="width:auto;max-width:80%" src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-email-footer-logo.jpg" width="227" height="65" alt="ILA Postcards logo" />
+              <img style="width:auto;max-width:80%;height:auto;" src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-email-footer-logo.jpg" width="227" height="65" alt="ILA Postcards logo" />
             </td>
             <td width="30%" align="right">
               <img style="width:auto;max-width:80%" src="http://fitzroypress.com.au/wp-content/uploads/2015/05/ila-share.png" width="41" height="19" alt="ILA share" />
